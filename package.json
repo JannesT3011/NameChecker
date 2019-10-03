@@ -1,0 +1,29 @@
+{
+  "name": "namechecker",
+  "version": "0.0.1",
+  "description": "Tool that checks if a username is available ",
+  "main": "index.js",
+  "scripts": {
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmbus/NameChecker.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bmbus/NameChecker/issues"
+  },
+  "homepage": "https://github.com/Bmbus/NameChecker#readme",
+  "dependencies": {
+    "@types/express": "^4.17.1",
+    "cheerio": "^1.0.0-rc.3",
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.3",
+    "request": "^2.88.0"
+  }
+}
