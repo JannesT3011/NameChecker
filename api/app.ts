@@ -1,5 +1,4 @@
 import express = require("express");
-import * as statusController from "./controllers/status"
 import cheerio = require("cheerio")
 import request = require("request")
 
@@ -12,28 +11,28 @@ app.get("/", (req, res) => {
   res.send("NameChecker!")
 });
 
-app.get("/github/:username", (req, res) => {
+app.get("/api/github/:username", (req, res) => {
   // check if a github username is available
   var link:string = "https://github.com/" + req.params.username
 
   request(link, (error, response, html) => {
     if (response.statusCode == 404) {
-      res.send("Username available")
+      res.send({"available":false})
     } else {
-      res.send("Registered!")
+      res.send({"available":true, "url": link})
     }
   })
 })
 
-app.get("/twitter/:username", (req, res) => {
+app.get("/api/twitter/:username", (req, res) => {
   // check if a twitter username is available
   var link:string = "https://twitter.com/" + req.params.username
 
   request(link, (error, response, html) => {
     if (response.statusCode == 404) {
-      res.send("Username available")
+      res.send({"available":false})
     } else {
-      res.send("Registered!")
+      res.send({"available":true, "url": link})
     }
   })
 })
