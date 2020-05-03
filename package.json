@@ -1,0 +1,23 @@
+{
+  "name": "namechecker",
+  "version": "1.0.0",
+  "description": "Webinterface for checking usernames",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmbus/NameChecker.git"
+  },
+  "author": "Bmbus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bmbus/NameChecker/issues"
+  },
+  "homepage": "https://github.com/Bmbus/NameChecker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
